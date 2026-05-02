@@ -1,0 +1,110 @@
+/* Chat Message */
+.chat-message {
+  display: flex;
+  margin-bottom: 16px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User Message */
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message-content {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+
+.user-message .message-sender {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.user-message .message-timestamp {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Assistant Message */
+.assistant-message {
+  justify-content: flex-start;
+}
+
+.assistant-message .message-content {
+  background: white;
+  color: #333;
+  border-radius: 18px 18px 18px 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.assistant-message .message-sender {
+  color: #667eea;
+}
+
+.assistant-message .message-timestamp {
+  color: #999;
+}
+
+/* Message Content */
+.message-content {
+  max-width: 70%;
+  padding: 12px 16px;
+  word-wrap: break-word;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 12px;
+}
+
+.message-sender {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.message-timestamp {
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.message-text {
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .message-content {
+    max-width: 85%;
+  }
+
+  .message-text {
+    font-size: 14px;
+  }
+
+  .message-sender {
+    font-size: 11px;
+  }
+
+  .message-timestamp {
+    font-size: 10px;
+  }
+}
+
+/* Made with Bob */
